@@ -3,11 +3,7 @@ import { Link } from 'react-router-dom';
 import "./BookList.css";
 
 const Book = ({ cover_img, title, author, edition_count, first_publish_year, amazon_id }) => {
-  const handleAmazonClick = () => {
-    if (amazon_id) {
-      window.open(`https://www.amazon.com/dp/${amazon_id}`, '_blank');
-    }
-  };
+  const amazonUrl = `https://www.amazon.com/s?k=${title}`;
 
   return (
     <div className='book-item flex flex-column flex-sb'>
@@ -36,10 +32,11 @@ const Book = ({ cover_img, title, author, edition_count, first_publish_year, ama
           <span>{first_publish_year}</span>
         </div>
 
-        {/* Display the button regardless of whether amazon_id is present */}
-        <button className="amazon-button" onClick={handleAmazonClick}>
-          View on Amazon
-        </button>
+        <div className='amazon-button'>
+          <a href={amazonUrl} target="_blank" rel="noopener noreferrer">
+            <button>Amazon</button>
+          </a>
+        </div>
       </div>
     </div>
   );
