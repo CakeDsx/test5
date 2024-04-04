@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import "./Navbar.css";
-import logoImg from "../../images/logo.png"
+import logoImg from "../pages/images/logo.png"
 import {HiOutlineMenuAlt3} from 'react-icons/hi'
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
                 <div className='brand-and-toggler felx felx-sb'>
                     <Link to = "/" className='navbar-brand flex'>
                         <img src = {logoImg} alt = "site logo" />
-                        <span className='text-uppercase fw-7 fs-24 ls-1'>Bookhub</span>
+                        <span className='text-uppercase fw-7 fs-24 ls-1'>BookSearch</span>
                     </Link>
                     <button type = "button" className='navbar-toggler-btn' onClick={handleNavbar}>
                         <HiOutlineMenuAlt3 size = {35} style = {{
