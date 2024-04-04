@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { AppProvider } from './components/pages/Context.';
-import './index.css';
+import './index.scss';
 import Home from './components/pages/Home/Home'
 import About from './components/pages/About/About'
 import BookList from './components/BookList/BookList'

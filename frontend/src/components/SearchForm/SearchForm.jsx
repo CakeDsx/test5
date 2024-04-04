@@ -12,8 +12,8 @@ const SearchForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const tempSearchTerm = searchText.current.value.trim();
-    if (tempSearchTerm.length === 0) {
-      setResultTitle('Please Enter Something ...');
+    if (tempSearchTerm.length < 3) {
+      setResultTitle('Please Enter at Least 3 Characters');
     } else {
       setSearchTerm(tempSearchTerm);
       navigate('/book');
